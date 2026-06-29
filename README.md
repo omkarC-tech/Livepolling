@@ -57,11 +57,10 @@ Live polling/
 │   ├── index.html              # Core HTML structure & Google Fonts
 │   └── package.json            # Client dependency configuration
 ├── server/                     # Express & WebSockets Backend
-│   ├── .env                    # Config parameters (ports, database, secrets)
 │   ├── models.js               # Mongoose Schemas & Database wrappers
 │   ├── server.js               # REST APIs & Socket.io Handlers
 │   └── package.json            # Server dependency configuration
-└── .gitignore                  # Git ignore rules (node_modules, env keys)
+└── .gitignore                  # Git ignore rules (excludes node_modules and configuration keys)
 ```
 
 ---
@@ -83,13 +82,8 @@ Follow these steps to run the application locally on your machine.
    ```bash
    npm install
    ```
-3. Create a `.env` file inside the `server/` directory:
-   ```env
-   PORT=5000
-   MONGODB_URI=mongodb://127.0.0.1:27017/live-polling
-   JWT_SECRET=super_secret_key_for_live_polling
-   ADMIN_SECRET_CODE=admin123
-   ```
+3. Set up your local environment configuration variables (such as ports, database connections, and JWT session secrets) as required by the application.
+
 4. Start the server:
    ```bash
    npm start
